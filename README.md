@@ -32,7 +32,8 @@ _before proceeding, the CLI will only work on a UNIX machine, to run this on a w
 # response to look like `{"total": 50000005000000}`
 ./dlg.sh call
 
-# we can finally shutdown the server, you wouldn't want a server running on your systems' background forever especially when its just a demo
+# we can finally shutdown the server, you wouldn't want a server running on 
+# your systems' background forever especially when its just a demo
 ./dlg.sh shutdown
 ``` 
 &nbsp;
