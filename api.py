@@ -16,7 +16,7 @@ class SimpleRequestHandler(BaseHTTPRequestHandler):
 
     def sum_value(self, request_data):
         """
-        A function to sum all the values extracted from the response object
+        A function to sum all the values extracted from the request object
         """
         request_data = parse_qs(request_data.decode('utf-8'))
 
