@@ -15,6 +15,9 @@ class SimpleRequestHandler(BaseHTTPRequestHandler):
         self.wfile.write(bytes(str("%s%s" % (content, "\n")).encode('utf-8')))
 
     def sum_value(self, request_data):
+        """
+        A function to sum all the values extracted from the response object
+        """
         request_data = parse_qs(request_data.decode('utf-8'))
 
         # we'll try to extract the number variable from the post data
