@@ -1,7 +1,7 @@
 # Raw Python3 API
 ![N|Solid](https://img.shields.io/badge/Raw--Python3--API-v.1.0-blue.svg)
 
-This readme document goes through an instruction to setup a simple python 3 API with no external libraries or frameworks. In this caller test, we will be sum up all number between 0 and 10000001 and expect a json response with `{"total": 50000005000000}`
+This readme document goes through an instruction to setup a simple python 3 API with no external libraries or frameworks. In the embedded call.py test, we will be summing up all integers between 0 and 10000001 and expect a json response with `{"total": 50000005000000}`
 
 ##
 ## Environmental Setup
