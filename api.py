@@ -25,7 +25,7 @@ class SimpleRequestHandler(BaseHTTPRequestHandler):
         try:
             arr = list(map(int, request_data['numbers'][0].split(",")))
             total = sum(arr)
-        except KeyError:
+        except (KeyError, TypeError, ValueError):
             total = "NaN"
 
         return total

@@ -86,6 +86,25 @@ class TestAll(unittest.TestCase):
 
         self.assertEqual(total, "NaN")
 
+    def test_wrong_payload_type(self):
+        """
+        check that NaN is returned when we send a wrong array type
+        like a,b,c,1,2,3. This values can't be summed
+        """
+        response = request.urlopen(self.url)
+        req = request.Request(self.url, data=b'numbers=a,b,c,1,2,3')
+        response = request.urlopen(req)
+        output = response.read(response.length).decode('utf-8')
+        total = None
+
+        try:
+            arr = json.loads(output)
+            total = arr["total"]
+        except (ValueError, KeyError):
+            pass
+
+        self.assertEqual(total, "NaN")
+
     def test_sum_1_to_3(self):
         """
         assert the API return 5 for the sum of 1,2,3
