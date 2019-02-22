@@ -5,7 +5,7 @@ This readme document goes through an instruction to setup a simple python 3 API 
 
 ##
 ## Environmental Setup
-You will need the following programs installed on your system to use this CLI script contained in the repository
+You will need the following programs installed on your system to use this CLI script `dlgcli.sh` contained in the repository
 - python3.6
 
 > _it's important to note that python 3.6 is the library we've used to test this application, however, I am confident that any version of python 3 should work properly_
@@ -19,22 +19,22 @@ _before proceeding, the CLI will only work on a UNIX machine, to run this on a w
 ```sh
 # before running any commands lets startup the server (the utility will start 
 # up the server in the background on port 5000 and verbosity set to null)
-./dlg.sh serve
+./dlgcli.sh serve
 
 # next we will run the test utility to be sure everything is fine, you can 
 # try running the test utility before the serve is up to see what the output 
 # looks like
-./dlg.sh test
+./dlgcli.sh test
 
 # let now make a proper API call, we will pass in values from 1,2,...,10000001 
 # to view the output. This is a lot of data, a 10 million and one item array. 
 # The server will process the total of the numbers in the array and return a 
 # response to look like `{"total": 50000005000000}`
-./dlg.sh call
+./dlgcli.sh call
 
 # we can finally shutdown the server, you wouldn't want a server running on 
 # your systems' background forever especially when its just a demo
-./dlg.sh shutdown
+./dlgcli.sh shutdown
 ``` 
 &nbsp;
 #### Windows Instruction
