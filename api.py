@@ -20,7 +20,7 @@ class SimpleRequestHandler(BaseHTTPRequestHandler):
         """
         request_data = parse_qs(request_data.decode('utf-8'))
 
-        # we'll try to extract the number variable from the post data
+        # we'll try to extract and sum the number variable from the post data
         # but return a NaN if we can't find it
         try:
             arr = list(map(int, request_data['numbers'][0].split(",")))
