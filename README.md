@@ -60,7 +60,7 @@ python3 call.py
 # we can finally shutdown the server, just Ctrl+C on the terminal window running
 # python serve.py
 ``` 
-&nbps;
+&nbsp;
 ##
 #### Understanding the Test Routine
 The main test routine runs the following test
